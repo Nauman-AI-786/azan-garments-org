@@ -48,7 +48,7 @@
     .eyebrow{display:inline-flex;align-items:center;gap:10px;text-transform:uppercase;letter-spacing:.2em;font-size:11px;font-weight:700;color:var(--gold)}
     .eyebrow:before{content:"";width:28px;height:1px;background:var(--gold)}
     h1,h2,h3,.serif{font-family:"Cormorant Garamond",Georgia,serif}
-    h2{font-size:clamp(38px,5vw,64px);line-height:.98;letter-spacing:-.03em}
+    h2{font-size:clamp(32px,4vw,48px);line-height:.98;letter-spacing:-.03em}
     .section{padding:100px 0}
     .section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:45px}
     .section-head p{max-width:480px;color:var(--muted)}
@@ -63,7 +63,7 @@
     .brand{display:flex;align-items:center;gap:11px;font-weight:800;letter-spacing:.03em}
     .brand-mark{width:40px;height:40px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;background:var(--ink);color:var(--gold2);box-shadow:0 7px 25px rgba(16,19,26,.16)}
     .brand-mark svg{width:23px}
-    .brand-name{font-family:"Cormorant Garamond",serif;font-size:27px;line-height:1}
+    .brand-name{font-family:"Cormorant Garamond",serif;font-size:24px;line-height:1}
     .brand-sub{display:block;font-family:Inter,sans-serif;font-size:8px;letter-spacing:.22em;color:var(--muted);margin-top:3px}
     .navlinks{display:flex;gap:27px;font-size:13px;font-weight:600}
     .navlinks a{position:relative}
@@ -79,7 +79,7 @@
       var(--cream2)}
     .hero:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(16,19,26,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(16,19,26,.035) 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(to bottom,black,transparent)}
     .hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.02fr .98fr;gap:70px;align-items:center;padding:80px 0}
-    .hero-copy h1{font-size:clamp(60px,8vw,105px);line-height:.82;letter-spacing:-.055em;margin:18px 0 25px}
+    .hero-copy h1{font-size:clamp(48px,6.5vw,76px);line-height:.82;letter-spacing:-.055em;margin:18px 0 25px}
     .hero-copy h1 span{color:var(--gold);font-style:italic}
     .hero-copy p{max-width:560px;color:#66635c;font-size:16px}
     .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
@@ -132,7 +132,7 @@
     .story{display:grid;grid-template-columns:.8fr 1.2fr;gap:80px;align-items:center}
     .year-box{background:var(--ink);color:white;border-radius:30px;padding:55px;min-height:370px;position:relative;overflow:hidden}
     .year-box:before{content:"2001";position:absolute;right:-15px;bottom:-50px;font-family:"Cormorant Garamond";font-size:150px;color:rgba(255,255,255,.05)}
-    .year-box .big{font-family:"Cormorant Garamond";font-size:100px;line-height:.8;color:var(--gold2)}
+    .year-box .big{font-family:"Cormorant Garamond";font-size:76px;line-height:.8;color:var(--gold2)}
     .year-box p{color:#bbb;margin-top:18px;max-width:260px}
     .story-copy h2{margin:17px 0 22px}
     .story-copy p{color:#6d6a63;margin-bottom:16px}
@@ -151,7 +151,7 @@
     .review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
     .review{padding:28px;background:#fff;border:1px solid var(--line);border-radius:22px;min-height:205px}
     .stars{color:var(--gold);letter-spacing:4px;font-size:13px;margin-bottom:16px}
-    .review p{color:#5f5d58;font-family:"Cormorant Garamond";font-size:22px;line-height:1.15}
+    .review p{color:#5f5d58;font-family:"Cormorant Garamond";font-size:18px;line-height:1.15}
     .review small{display:block;color:#999;margin-top:22px}
     .review-note{margin-top:18px;color:#8a867e;font-size:11px;text-align:center}
 
@@ -179,6 +179,19 @@
     footer .brand{color:white}.footer-title{color:#fff;font-weight:700;font-size:12px;margin-bottom:14px}
     footer a,footer p{font-size:12px;color:#999;display:block;margin:8px 0}
     .copyright{border-top:1px solid rgba(255,255,255,.08);margin-top:35px;padding-top:20px;font-size:10px;display:flex;justify-content:space-between;gap:20px}
+
+
+    .review-empty{max-width:760px;margin:0 auto;text-align:center;padding:45px 28px;border:1px solid var(--line);border-radius:24px;background:#fff}
+    .review-empty-icon{width:48px;height:48px;border-radius:50%;border:1px solid rgba(200,164,93,.55);display:grid;place-items:center;margin:0 auto 18px;color:var(--gold);font-size:18px}
+    .review-empty h3{font-size:31px;margin-bottom:8px}
+    .review-empty p{max-width:560px;margin:auto;color:var(--muted);font-size:13px}
+    .feature-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:35px}
+    .feature{padding:23px;border:1px solid var(--line);border-radius:18px;background:#fff}
+    .feature-icon{font-size:18px;color:var(--gold);margin-bottom:13px}
+    .feature h3{font-size:22px;margin-bottom:6px}.feature p{font-size:12px;color:var(--muted)}
+    .map-frame{width:100%;height:100%;min-height:390px;border:0;display:block}
+    @media(max-width:900px){.feature-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:560px){.feature-grid{grid-template-columns:1fr}.map-frame{min-height:280px}}
 
     .top{position:fixed;right:20px;bottom:20px;width:44px;height:44px;border-radius:50%;background:var(--ink);color:var(--gold2);border:1px solid rgba(200,164,93,.4);display:grid;place-items:center;opacity:0;pointer-events:none;transition:.3s;z-index:30}
     .top.show{opacity:1;pointer-events:auto}
@@ -228,6 +241,11 @@
     "areaServed":"Lahore",
     "foundingDate":"2001",
     "priceRange":"$$",
+    "geo":{
+      "@type":"GeoCoordinates",
+      "latitude":31.4509,
+      "longitude":74.35368
+    },
     "sameAs":[
       "https://nauman-ai-786.github.io/azan-garments-org/"
     ]
@@ -236,7 +254,7 @@
 </head>
 
 <body>
-  <div class="announcement">PREMIUM KIDS WEAR <b>•</b> SERVING FAMILIES SINCE 2001 <b>•</b> LAHORE</div>
+  <div class="announcement">PREMIUM KIDS WEAR <b>•</b> CHUNGI AMAR SIDHU, LAHORE</div>
 
   <header>
     <div class="container">
@@ -258,6 +276,7 @@
 
         <div class="navlinks" id="navlinks">
           <a href="#collections">Collections</a>
+          <a href="#services">Shop</a>
           <a href="#story">Our Story</a>
           <a href="#reviews">Reviews</a>
           <a href="#visit">Visit Us</a>
@@ -284,7 +303,6 @@
             <a class="btn btn-light" href="#visit">Visit Our Shop</a>
           </div>
           <div class="hero-meta">
-            <div><strong>2001</strong><small>Established</small></div>
             <div><strong>Kids</strong><small>Fashion Focus</small></div>
             <div><strong>Lahore</strong><small>Our Home</small></div>
           </div>
@@ -326,10 +344,25 @@
       </div>
     </section>
 
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-head">
+          <div><span class="eyebrow">What you can find</span><h2>Built around kids & occasions.</h2></div>
+          <p>A simple, practical guide to the categories customers can explore when they visit the shop.</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature"><div class="feature-icon">01</div><h3>Everyday Kidswear</h3><p>Children's clothing for regular family days and outings.</p></article>
+          <article class="feature"><div class="feature-icon">02</div><h3>Formal Looks</h3><p>Pant coat styles for parties, gatherings and special occasions.</p></article>
+          <article class="feature"><div class="feature-icon">03</div><h3>Eastern Wear</h3><p>Sherwani and kurta pajama for traditional celebrations.</p></article>
+          <article class="feature"><div class="feature-icon">04</div><h3>New Arrivals</h3><p>Product photos and latest stock can be added here later.</p></article>
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="story">
       <div class="container story">
         <div class="year-box">
-          <span class="eyebrow">Our beginning</span>
+          <span class="eyebrow">Our story</span>
           <div class="big">2001</div>
           <p>A local family business built around clothing, tradition and the happiness of dressing children for life's little celebrations.</p>
         </div>
@@ -361,15 +394,14 @@
     <section class="section reviews" id="reviews">
       <div class="container">
         <div class="section-head">
-          <div><span class="eyebrow">Families matter</span><h2>Customer reviews</h2></div>
-          <p>Your real customer feedback can be placed here as the shop collects reviews online.</p>
+          <div><span class="eyebrow">Customer voice</span><h2>Reviews</h2></div>
+          <p>We are keeping this section genuine. Real customer feedback will be added here as customers share their experience.</p>
         </div>
-        <div class="review-grid">
-          <article class="review"><div class="stars">★★★★★</div><p>“Your genuine customer review will appear here.”</p><small>— Customer review placeholder</small></article>
-          <article class="review"><div class="stars">★★★★★</div><p>“A real family experience can be featured in this space.”</p><small>— Customer review placeholder</small></article>
-          <article class="review"><div class="stars">★★★★★</div><p>“Send us your review and we can turn it into a beautiful testimonial.”</p><small>— Customer review placeholder</small></article>
+        <div class="review-empty">
+          <div class="review-empty-icon">★</div>
+          <h3>Real reviews coming soon</h3>
+          <p>No made-up testimonials. When you have genuine reviews from customers, they can be displayed here with the customer's permission.</p>
         </div>
-        <div class="review-note">Note: Replace these placeholders with genuine customer reviews before publishing them as testimonials.</div>
       </div>
     </section>
 
@@ -379,15 +411,19 @@
           <span class="eyebrow">Come say hello</span>
           <h2>Visit Azan Garments</h2>
           <p>Find us in the Chungi Amar Sidhu area of Lahore at Madina Bazar.</p>
+          <a class="btn btn-light" style="margin-top:22px;border-color:rgba(255,255,255,.35);color:#fff" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Chungi+Amar+Sidhu+Madina+Bazar+Lahore">Open in Google Maps →</a>
           <div class="contact-list">
-            <div class="contact-row"><span>⌂</span><div><b>Address</b><br><span style="color:#aaa">Chungi Amar Sidhu, Madina Bazar, Lahore, Punjab, Pakistan</span></div></div>
+            <div class="contact-row"><span>⌂</span><div><b>Address</b><br><span style="color:#aaa">Madina Bazar, Chungi Amar Sidhu, Lahore, Punjab, Pakistan</span></div></div>
             <div class="contact-row"><span>◷</span><div><b>Opening hours</b><br><span style="color:#aaa">Add your exact shop timings here</span></div></div>
             <div class="contact-row"><span>☎</span><div><b>Phone / WhatsApp</b><br><span style="color:#aaa">Add your shop number here</span></div></div>
           </div>
         </div>
-        <div class="map-box" aria-label="Location graphic">
-          <div class="map-pin">⌖</div>
-          <div class="map-label">Chungi Amar Sidhu • Madina Bazar • Lahore</div>
+        <div class="map-box" aria-label="Map of Chungi Amar Sidhu, Madina Bazar, Lahore">
+          <iframe class="map-frame"
+            src="https://www.google.com/maps?q=31.4509,74.35368&z=16&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Chungi Amar Sidhu, Madina Bazar, Lahore map"></iframe>
         </div>
       </div>
     </section>
