@@ -412,14 +412,10 @@
       <div class="container">
         <div class="section-head">
           <div><span class="eyebrow">Customer voice</span><h2>Customer Feedback</h2></div>
-          <p>Feedback stays hidden until you choose to show it. Only genuine customer feedback should be displayed here.</p>
+          <p>Tap “Feedback” to view the feedback area. Only genuine customer feedback should be displayed here.</p>
         </div>
         <div class="feedback-control">
-          <label for="feedbackVisibility">Feedback</label>
-          <select class="feedback-select" id="feedbackVisibility" aria-label="Choose whether to show customer feedback">
-            <option value="hide" selected>Hide feedback</option>
-            <option value="show">Show feedback</option>
-          </select>
+          <button type="button" class="feedback-select" id="feedbackToggle" aria-expanded="false" aria-controls="feedbackPanel">Feedback</button>
         </div>
         <div class="feedback-panel" id="feedbackPanel">
           <div class="review-empty">
@@ -437,19 +433,18 @@
           <span class="eyebrow">Come say hello</span>
           <h2>Visit Azan Garments</h2>
           <p>Find us in the Chungi Amar Sidhu area of Lahore at Madina Bazar.</p>
-          <a class="btn btn-light" style="margin-top:22px;border-color:rgba(255,255,255,.35);color:#fff" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Chungi+Amar+Sidhu+Madina+Bazar+Lahore">Open in Google Maps →</a>
+          <a class="btn btn-light" style="margin-top:22px;border-color:rgba(255,255,255,.35);color:#fff" target="_blank" rel="noopener" href="https://maps.app.goo.gl/qQ9JpkhV4ftu1RMF8">Open Location in Google Maps →</a>
           <div class="contact-list">
             <div class="contact-row"><span>⌂</span><div><b>Address</b><br><span style="color:#aaa">Madina Bazar, Chungi Amar Sidhu, Lahore, Punjab, Pakistan</span></div></div>
             <div class="contact-row"><span>◷</span><div><b>Opening hours</b><br><span style="color:#aaa">Add your exact shop timings here</span></div></div>
             <div class="contact-row"><span>☎</span><div><b>Phone / WhatsApp</b><br><span style="color:#aaa">Add your shop number here</span></div></div>
           </div>
         </div>
-        <div class="map-box" aria-label="Map of Chungi Amar Sidhu, Madina Bazar, Lahore">
-          <iframe class="map-frame"
-            src="https://www.google.com/maps?q=31.4509,74.35368&z=16&output=embed"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            title="Chungi Amar Sidhu, Madina Bazar, Lahore map"></iframe>
+        <div class="map-box" aria-label="Azan Garments location on Google Maps">
+          <a href="https://maps.app.goo.gl/qQ9JpkhV4ftu1RMF8" target="_blank" rel="noopener" style="display:flex;min-height:300px;height:100%;align-items:center;justify-content:center;text-align:center;text-decoration:none;color:inherit;background:linear-gradient(135deg,#f7f0e3,#e9dfcd);">
+            <div class="map-pin">⌖</div>
+            <div class="map-label">Open exact location in Google Maps →</div>
+          </a>
         </div>
       </div>
     </section>
@@ -488,10 +483,11 @@
     const topBtn = document.getElementById('top');
     window.addEventListener('scroll', () => topBtn.classList.toggle('show', window.scrollY > 500));
     document.getElementById('year').textContent = new Date().getFullYear();
-    const feedbackVisibility = document.getElementById('feedbackVisibility');
+    const feedbackToggle = document.getElementById('feedbackToggle');
     const feedbackPanel = document.getElementById('feedbackPanel');
-    feedbackVisibility.addEventListener('change', () => {
-      feedbackPanel.classList.toggle('show', feedbackVisibility.value === 'show');
+    feedbackToggle.addEventListener('click', () => {
+      const isOpen = feedbackPanel.classList.toggle('show');
+      feedbackToggle.setAttribute('aria-expanded', String(isOpen));
     });
   </script>
 </body>
